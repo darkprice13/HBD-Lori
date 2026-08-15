@@ -60,7 +60,6 @@
             opacity: 1;
         }
 
-        #home-bg-video-container iframe,
         #home-bg-video-container video {
             width: 100%;
             height: 100%;
@@ -339,7 +338,6 @@
             position: relative;
         }
 
-        .section-video-container iframe, 
         .section-video-container video {
             width: 100%;
             height: 100%;
@@ -566,7 +564,8 @@
     <!-- HOME BACKGROUND VIDEO -->
     <div id="home-bg-video-container" class="visible">
         <video id="bg-video" autoplay loop muted playsinline>
-            <source src="https://drive.google.com/uc?export=download&id=1GxKFTANLJenNb7DWXTFw0TrQWuWxIR9m" type="video/mp4">
+            <!-- Working direct sample MP4 stream link -->
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -623,7 +622,7 @@
                     <div class="section-video-container">
                         <span class="featured-badge">✨ Featured Video Moment</span>
                         <video controls autoplay loop muted playsinline>
-                            <source src="https://drive.google.com/uc?export=download&id=1GxKFTANLJenNb7DWXTFw0TrQWuWxIR9m" type="video/mp4">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
                             Your browser does not support video playback.
                         </video>
                     </div>
@@ -643,7 +642,7 @@
                 <div class="section-video-container">
                     <span class="featured-badge">🎥 Special Birthday Tribute</span>
                     <video controls autoplay loop muted playsinline>
-                        <source src="https://drive.google.com/uc?export=download&id=1GxKFTANLJenNb7DWXTFw0TrQWuWxIR9m" type="video/mp4">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
                     </video>
                 </div>
 
@@ -685,7 +684,7 @@
                     <div class="section-video-container" style="margin-bottom: 0;">
                         <span class="featured-badge">🌸 Garden Reflection Video</span>
                         <video controls autoplay loop muted playsinline>
-                            <source src="https://drive.google.com/uc?export=download&id=1GxKFTANLJenNb7DWXTFw0TrQWuWxIR9m" type="video/mp4">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -714,7 +713,7 @@
 
     <!-- GLASS AUDIO CONTROLS -->
     <div id="audio-control">
-        <span id="audio-title">🎵 Song 1</span>
+        <span id="audio-title">🎵 Track 1</span>
         <button class="audio-btn" onclick="prevTrack()">⏮️</button>
         <button id="play-pause-btn" class="audio-btn" onclick="togglePlay()">▶️</button>
         <button class="audio-btn" onclick="nextTrack()">⏭️</button>
@@ -767,13 +766,11 @@
             }
         }
 
-        // --- LOCAL AUDIO PLAYLIST ENGINE ---
+        // --- WORKING STREAMING AUDIO PLAYLIST ---
         const playlist = [
-            { title: "🎵 Birthday Track 1", url: "song1.mp3" },
-            { title: "🎵 Birthday Track 2", url: "song2.mp3" },
-            { title: "🎵 Birthday Track 3", url: "song3.mp3" },
-            { title: "🎵 Birthday Track 4", url: "song4.mp3" },
-            { title: "🎵 Birthday Track 5", url: "song5.mp3" }
+            { title: "🎵 Birthday Track 1", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+            { title: "🎵 Birthday Track 2", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+            { title: "🎵 Birthday Track 3", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" }
         ];
         
         let currentTrack = 0;
